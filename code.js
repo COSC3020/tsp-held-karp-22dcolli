@@ -19,9 +19,10 @@ function tsp_hk(distance_matrix) {
                 //used the replit example above to write this skip too(don't know if I need to mark this but I will)
                 if ((visitedSubset & (1 << nextCity)) || curCity === nextCity) continue;
 
-                let nextVisitedSubset = visitedSubset | (curCity ===nextCity);
-
-                table[nextVisitedSubset][nextCity], table[visitedSubset][curCity] + distance_matrix[curCity][nextCity];
+                let nextVisitedSubset = visitedSubset | (1 << nextCity);
+                
+                //used replit ai tool to help me fix this line, I didn't know how to fix it but my original was causing the final result to always be Infinity So I knew it was wrong
+                table[nextVisitedSubset][nextCity] = Math.min(table[nextVisitedSubset][nextCity], table[visitedSubset][curCity] + distance_matrix[curCity][nextCity]);
             }
         }
     }
@@ -29,11 +30,22 @@ function tsp_hk(distance_matrix) {
     let finalCitySubset =(1 <<n) -1;
     let sPath = Infinity;
 
-    for(let endCity = 0;endCity <n;endCity++){
+    for(let endCity = 1;endCity <n;endCity++){
         sPath = Math.min(sPath,table[finalCitySubset][endCity]);
 
     }
     return sPath;
+
+
+
+
+
+
+
+
+
+
+}
 
 
 
