@@ -8,11 +8,10 @@ function tsp_hk(distance_matrix) {
     //base case
     table[1][0] = 0; 
     
-    //start iterations
-
+    //start iterating
     for(let visitedSubset =1; visitedSubset < (1 << n); visitedSubset++){
 
-        for (let curCity = 1; curCity < n; curCity++){
+        for (let curCity = 0; curCity < n; curCity++){
             //used replit ai tool to help get the sytax right in order to skip if city isnt in the subset
             if(!(visitedSubset & (1 << curCity))) continue;
 
@@ -27,6 +26,14 @@ function tsp_hk(distance_matrix) {
         }
     }
 
+    let finalCitySubset =(1 <<n) -1;
+    let sPath = Infinity;
+
+    for(let endCity = 0;endCity <n;endCity++){
+        sPath = Math.min(sPath,table[finalCitySubset][endCity]);
+
+    }
+    return sPath;
 
 
 
@@ -35,6 +42,6 @@ function tsp_hk(distance_matrix) {
 
 
 
-    return -1;
+
+
 }
-
