@@ -1,3 +1,8 @@
+function tsp_hk(distance_matrix){
+    return -1
+}
+
+/*
 function tsp_hk(distance_matrix) {
 
     let n = distance_matrix.length;
@@ -52,7 +57,7 @@ function tsp_hk(distance_matrix) {
     return sPath; 
 }
 
-/*
+
 dm = [[0,3,4,2,7],
       [3,0,4,6,3],
       [4,4,0,5,8],
