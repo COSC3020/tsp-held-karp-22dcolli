@@ -49,7 +49,7 @@ otherwise. I am aware that plagiarism carries severe penalties and that if plagi
 suspected, charges may be filed against me without prior notice.”
 
 ## Note
-I did not complete this excersise last semester, so I am attempting this completely from scratch. I used this video "Held Karp Dynamic Programming Algorithm for the Traveling Salesman Problem Example" (https://www.youtube.com/watch?v=6jqlBDYNrL0) as an example for my algorithm, the video itself has no code, the way he navigated the problem made sense to me so it helped.
+I did not complete this excersise last semester, so I am attempting this completely from scratch. I used this video "Held Karp Dynamic Programming Algorithm for the Traveling Salesman Problem Example" (https://www.youtube.com/watch?v=6jqlBDYNrL0) as an example for my algorithm, the video itself has no code, the way he navigated and explained the problem made sense to me so it helped to see it computed by hand.
 I also used bitmasking in my algorithm but didn't know fully how it operated and the syntax so I asked chatGPT "what is a bitmask and how would it represent cities" and it gave me this verbatum "What Is a Bitmask?
 A bitmask is a way to represent subsets of a set using binary numbers. Each bit in the binary number corresponds to whether an element is included in the subset:
 
