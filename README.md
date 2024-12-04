@@ -76,4 +76,4 @@ reasoning, to this markdown file.
 The worst case here, would be if the algorithm had to work through all the subsets of the city set which would be $2^n$ subsets depending on the amount of cities. Then on top of that, the innermost two for loops represent that in each of the subsets you have to iterate over all the potential "curCity" and the potential "nexCity" which combined would be $n^2$. So overall the worst case time complexity would be $\Theta(2^n * n^2)$
 
 #### worst-case asymptotic memory complexity:
-For my algorithm the memory complexity centers around the table contents I believe, with there being a row for each city subset($2^n$) and each column being $n$ because they represent each city as the current city in each of the subsets. Together that leaves a worst-case asymptotic memory complexity of $/Theta(2^n * n).
+For my algorithm the memory complexity centers around the table contents I believe, with there being a row for each city subset($2^n$) and each column being $n$ because they represent each city as the current city in each of the subsets. Together that leaves a worst-case asymptotic memory complexity of $\Theta(2^n * n)$.
