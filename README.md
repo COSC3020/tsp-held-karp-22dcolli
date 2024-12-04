@@ -40,6 +40,31 @@ the values in the cells are the distances between the corresponding cities) and
 returns the length of the shortest tour (not the tour itself).
 
 Test your new function; I've provided some basic testing code in `code.test.js`.
+## Plagarism Statement
+
+All exercises must contain the following statement:
+“I certify that I have listed all sources used to complete this exercise, including the use
+of any Large Language Models. All of the work is my own, except where stated
+otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is
+suspected, charges may be filed against me without prior notice.”
+
+## Note
+I did not complete this excersise last semester, so I am attempting this completely from scratch. I used this video "Held Karp Dynamic Programming Algorithm for the Traveling Salesman Problem Example" (https://www.youtube.com/watch?v=6jqlBDYNrL0) as an example for my algorithm, the video itself has no code, the way he navigated the problem made sense to me so it helped.
+I also used bitmasking in my algorithm but didn't know fully how it operated and the syntax so I asked chatGPT "what is a bitmask and how would it represent cities" and it gave me this verbatum "What Is a Bitmask?
+A bitmask is a way to represent subsets of a set using binary numbers. Each bit in the binary number corresponds to whether an element is included in the subset:
+
+1: The element is included.
+0: The element is not included.
+Example of Cities
+Suppose we have 4 cities: A, B, C, and D. These cities can be numbered as 0, 1, 2, and 3.
+
+Using a bitmask:
+
+Binary 0001 (Decimal 1): Only city A (city 0) is in a subset.
+Binary 1011 (Decimal 11): Cities A, B, and D (cities 0, 1, 3) are a subset.
+Binary 1111 (Decimal 15): All cities are in a subset." 
+Finally, I used replit ai tool to help me with some syntax questions(all marked in code) in particular the syntax for creating the initial table and for desired skipping.
+
 
 ## Runtime Analysis
 
