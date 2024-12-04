@@ -59,6 +59,6 @@ dm = [[0,3,4,2,7],
       [2,6,5,0,6],
       [7,3,8,6,0]];
 
-const result = tsp_hk(dm);
-console.log(`The length of the shortest tour is: ${result}`);
+
+console.log(tsp_hk(dm));
 */
