@@ -72,6 +72,7 @@ What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
 
-### worst-case asymptotic time complexity:
+#### worst-case asymptotic time complexity:
+The worst case here, would be if the algorithm had to work through all the subsets of the city set which would be $2^n$ subsets depending on the amount of cities. Then on top of that, the innermost two for loops represent that in each of the subsets you have to iterate over all the potential "curCity" and the potential "nexCity" which combined would be $n^2$. So overall the worst case time complexity would be $\Theta(2^n * n^2)$
 
-### worst-case asymptotic memory complexity:
+#### worst-case asymptotic memory complexity:
