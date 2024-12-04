@@ -10,7 +10,7 @@ function tsp_hk(distance_matrix) {
     let sPath = Infinity;
 
 
-    for(let startCity =0;startCity < n; startCity++){
+    for(let startCity = 0; startCity < n; startCity++){
 
         let table = [];
         //used replit ai to help get the syntax for the table I wanted, specifically it helped me use (1 << n) here
@@ -34,33 +34,22 @@ function tsp_hk(distance_matrix) {
                     let nextVisitedSubset = visitedSubset | (1 << nextCity);
                     
                     //used replit ai tool to help me fix this line, I didn't know how to fix it but my original was causing the final result to always be Infinity So I knew it was wrong
-                    table[nextVisitedSubset][nextCity] = Math.min(table[nextVisitedSubset][nextCity], table[visitedSubset][curCity]);
+                    table[nextVisitedSubset][nextCity] = Math.min(table[nextVisitedSubset][nextCity], (table[visitedSubset][curCity] + distance_matrix[curCity][nextCity]));
                 }
             }
         }
+        let finalCitySubset =(1 <<n) -1;
+
+        for(let endCity = 1;endCity <n;endCity++){
+
+            if(endCity !== startCity){
+
+                sPath = Math.min(sPath,table[finalCitySubset][endCity]);
+            }
+        }
     }
-
     
-    
-
-    let finalCitySubset =(1 <<n) -1;
-    let sPath = Infinity;
-
-    for(let endCity = 1;endCity <n;endCity++){
-        sPath = Math.min(sPath,table[finalCitySubset][endCity]+distance_matrix[endCity][0]);
-
-    }
-    return sPath;
-
-
-
-
-
-
-
-
-
-
+    return sPath; 
 }
 
 /*
