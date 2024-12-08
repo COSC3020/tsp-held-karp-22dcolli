@@ -84,6 +84,10 @@ For my algorithm the memory complexity centers around the table contents I belie
 
 For this implementation of the algorithm I read these web articles, "JavaScript Memoization" (https://www.geeksforgeeks.org/javascript-memoization/), "JavaScript Array Reference" (https://www.w3schools.com/jsref/jsref_obj_array.asp), and more specifically through that initial reference page these two, "JavaScriptArray keys()"(https://www.w3schools.com/jsref/jsref_keys.asp) and "JavaScript Array maps()"(https://www.w3schools.com/jsref/jsref_map.asp). I also used some simular logic as in Augmenting Path and Detecting Cycle which is marked inside.
 
+#### NEW worst-case asymptotic time complexity:
+
+#### NEW worst-case asymptotic memory complexity:
+
 
 
 
