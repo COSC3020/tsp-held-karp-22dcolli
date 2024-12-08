@@ -58,12 +58,127 @@ function tsp_hk(distance_matrix) {
 }
 
 
-dm = [[0,3,4,2,7],
-      [3,0,4,6,3],
-      [4,4,0,5,8],
-      [2,6,5,0,6],
-      [7,3,8,6,0]];
-
-
-console.log(tsp_hk(dm));
 */
+
+
+
+
+
+
+
+function tsp_hk(distanceMatrix){
+
+    let n = distanceMatrix.length;
+
+    if (n <=1){
+        return 0;
+    }
+
+
+    //remembers the subproblems
+    let cache = new Map();
+
+    function backtrack(currentCity,visitedSet){
+        
+        let key = "";
+        //creates a new key if there isnt one alread, the key is whats left to be checked or the subset and the cuurent
+        for (let city of visitedSet){
+            key= (key + city + ",")
+        }
+        key = key.slice(0, -1) + ":" + currentCity;
+
+        //if the works done already, just get it again with the key
+        if(cache.has(key)){
+            return cache.get(key);
+        }
+
+        //base case HERE
+        if(visitedSet.size === 1) {
+
+            let startCity = visitedSet.values().next().value;
+            return distanceMatrix[startCity][currentCity];
+        }
+
+        let minCost = Infinity;
+
+        //simular to augmenting path and detecting cycles to explore
+        for (let nextCity of visitedSet){
+
+            if(nextCity !== currentCity){
+                //the same set but without current city
+                let remainingSet = new Set();
+
+                for (let city of visitedSet){
+
+                    if(city !== currentCity) {
+                        remainingSet.add(city);
+                    }
+                }
+                //cost totaling recursively
+                let cost = backtrack(nextCity, remainingSet) + distanceMatrix[nextCity][currentCity];
+                minCost = Math.min(minCost, cost);
+            }
+        }
+
+        //remember the cost for this here
+        cache.set(key, minCost);
+        return minCost;
+    }
+
+    let totalCost = Infinity;
+
+    //like in detectingcycles check starting from each node/city just to make sure
+    for (let startCity = 0; startCity < n; startCity++) {
+        
+        let visitedSet = new Set();
+        for(let i=0; i < n; i++) {
+            visitedSet.add(i);
+        }
+
+
+        visitedSet.delete(startCity);
+
+        //cost totaling again
+        let cost = backtrack(startCity, visitedSet);
+        totalCost = Math.min(totalCost, cost);
+    }
+
+    return totalCost;
+}
+
+
+/*
+let distanceMatrix1 = [[]];
+
+console.log(heldKarpDynamic(distanceMatrix1));
+
+let distanceMatrix2 = [[0]];
+
+console.log(heldKarpDynamic(distanceMatrix2));
+
+let distanceMatrix3 = 
+[[0,0,0],
+[0,0,0],
+[0,0,0]];
+
+console.log(heldKarpDynamic(distanceMatrix3));
+
+let distanceMatrix4 = 
+[[0,1,2],
+[1,0,2],
+[2,2,0]];
+
+console.log(heldKarpDynamic(distanceMatrix4));
+
+let distanceMatrix5 = [
+    [0, 3, 4, 2, 7],
+    [3, 0, 4, 6, 3],
+    [4, 4, 0, 5, 8],
+    [2, 6, 5, 0, 6],
+    [7, 3, 8, 6, 0]
+];
+
+console.log(heldKarpDynamic(distanceMatrix5));
+
+*/
+
