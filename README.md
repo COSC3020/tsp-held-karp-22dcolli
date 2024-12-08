@@ -77,3 +77,7 @@ The worst case here, would be if the algorithm had to work through all the subse
 
 #### worst-case asymptotic memory complexity:
 For my algorithm the memory complexity centers around the table contents I believe, with there being a row for each city subset($2^n$) and each column being $n$ because they represent each city as the current city in each of the subsets. Together that leaves a worst-case asymptotic memory complexity of $\Theta(2^n * n)$.
+
+## Update:
+
+
