@@ -78,6 +78,12 @@ The worst case here, would be if the algorithm had to work through all the subse
 #### worst-case asymptotic memory complexity:
 For my algorithm the memory complexity centers around the table contents I believe, with there being a row for each city subset($2^n$) and each column being $n$ because they represent each city as the current city in each of the subsets. Together that leaves a worst-case asymptotic memory complexity of $\Theta(2^n * n)$.
 
-## Update:
+# Update:
+
+## New Note:
+
+For this implementation of the algorithm I read these web articles, "JavaScript Memoization" (https://www.geeksforgeeks.org/javascript-memoization/), "JavaScript Array Reference" (https://www.w3schools.com/jsref/jsref_obj_array.asp), and more specifically through that initial reference page these two, "JavaScriptArray keys()"(https://www.w3schools.com/jsref/jsref_keys.asp) and "JavaScript Array maps()"(https://www.w3schools.com/jsref/jsref_map.asp).
+
+
 
 
