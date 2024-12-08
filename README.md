@@ -85,10 +85,12 @@ For my algorithm the memory complexity centers around the table contents I belie
 For this implementation of the algorithm I read these web articles, "JavaScript Memoization" (https://www.geeksforgeeks.org/javascript-memoization/), "JavaScript Array Reference" (https://www.w3schools.com/jsref/jsref_obj_array.asp), and more specifically through that initial reference page these two, "JavaScriptArray keys()"(https://www.w3schools.com/jsref/jsref_keys.asp) and "JavaScript Array maps()"(https://www.w3schools.com/jsref/jsref_map.asp). I also used some simular logic as in Augmenting Path and Detecting Cycle which is marked inside.
 
 #### NEW worst-case asymptotic time complexity:
-I believe that this implementation has a simular worst case time complexity as the other implementation, with the worst case scenario being the same for both in that you'd be doing the maximum amount of work. Here though, my reasoning is that, the work for checking all subsets would require $n$ time for subset, and then the portion of the new implementation that I see is partially simular to detecting cycles that re-checks from every city would mean another $n$ amount of time. Essentiall for all subsets( the amount of subsets being $2^n$) for as many cities($n$) checking through each subset($n$). Making the overall worst case complexity $\Theta(2^n * n^2)$.
+
+I believe that this implementation has a simular worst case time complexity as the other implementation, with the worst case scenario being the same for both in that you'd be doing the maximum amount of work. Here though, my reasoning is that, the work for checking all subsets would require $n$ time for subset, and then the portion of the new implementation that I see is partially simular to detecting cycles that re-checks from every city would mean another $n$ amount of time. Essentiall for all subsets( the amount of subsets being $2^n$) for as many cities($n$) checking through each subset($n$) I think. Making the overall worst case complexity $\Theta(2^n * n^2)$.
 
 #### NEW worst-case asymptotic memory complexity:
 
+Also simularly to the other implementation, remembering each of the subsets in the cache would take $n$ space and the total amount of possible subsets being $2^n$ giving an overall worst case complexity of $\Theta(2^n * n)$.
 
 
 
